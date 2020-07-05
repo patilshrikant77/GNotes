@@ -1,0 +1,60 @@
+
+      :host {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0px;
+      }
+      
+
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+      mat-card-header{
+        background: rgba(0, 0, 0, 0.87);;
+        color: #fff;
+        padding: 5px;
+
+      
+      }
+      mat-card {
+          padding: 0;
+      }
+
+
+
+      mat-card-title,
+      mat-card-content {
+        display: flex;
+        justify-content: center;
+      }
+      mat-card-title{
+        margin-top: 10px;
+      }
+ 
+     
+
+      mat-card-content{
+        padding: 50px;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+        
+    color: #fff;
+
+      .mat-button {
+        background: #000;
+      }
+
+      }
+
+     

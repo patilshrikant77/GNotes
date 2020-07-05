@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-md-4  mb-4 p-0">
+
+    <div class="card">
+      <div class="card-header">
+        <strong>G Notes</strong>
+      </div>
+
+   <ul class="list-group mb-3">
+      <li  (click)="readyForUpdate(note)" *ngFor="let note of gNotes"  class="list-group-item d-flex justify-content-between lh-condensed">
+        <div class="notesDetails">
+          <h4 class="my-0">{{note.title}}</h4>
+          <small class="text-muted">{{note.description}}</small>
+        </div>
+        <span class="text-muted">
+        <a [routerLink]="" (click)="deleteNote(note.id)"><mat-icon>clear</mat-icon></a></span>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="col-md-8 mt-4 ">
+    <h4 class="mb-3">Add Note</h4>
+    <div class="w-100 text-right">
+    <button (click)="onReset()" mat-stroked-button color="primary"  aria-label="Example icon button with a plus one icon">
+      <mat-icon>note_add</mat-icon><span class="ml-1">Add Note</span>
+    </button>
+  </div>
+  <form [formGroup]="gNotesForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        
+        <div class="col-md-12 mb-3">
+          <label for="title">Title</label>
+          <input type="text"  [ngModel]="gNote.title" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" formControlName="title" class="form-control" id="title" >
+           <div [ngClass]="{ 'd-block': submitted && f.title.errors }" *ngIf="submitted && f.title.errors" class="invalid-feedback">
+            <div *ngIf="f.title.errors.required">Title is required</div>
+        </div>
+          
+        </div>
+        <div class="col-md-12 mb-3">
+          <label for="notebody">Body</label>
+          <textarea formControlName="description" [ngModel]="gNote.description"  [ngClass]="{ 'is-invalid': submitted && f.description.errors }" class="form-control" id="notebody" rows="3"></textarea>
+          <div [ngClass]="{ 'd-block': submitted && f.description.errors }" *ngIf="submitted && f.description.errors" class="invalid-feedback">
+            <div *ngIf="f.description.errors.required">Description is required</div>
+        </div>
+
+        </div>
+      </div>
+      <div class="w-100 text-right button">
+       
+          <button type="submit"   mat-raised-button color="primary">Save</button>
+          <!-- [disabled]="!gNotesForm.valid" -->
+         
+
+      </div>
+      </form>
+
+  </div>
+  </div>
+    

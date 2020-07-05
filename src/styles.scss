@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    margin: 0; 
+    background: #fafafa;
+
+}
+.header-wrapper{
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.navbar-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+   
+
+    .mat-toolbar{
+        background: rgba(0,0,0,.87);
+        color: #ff4081;
+
+    }
+
+  
+      
+    
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: #ff4081;
+      }
+}
+
+.mat-card-header-text{
+    width: 100%;
+  
+}
+
+
+.message {
+  color: rgba(255,255,255,1)
+}

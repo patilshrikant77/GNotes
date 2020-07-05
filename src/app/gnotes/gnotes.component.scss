@@ -1,0 +1,13 @@
+.card {
+    height: calc(100vh - 3.75rem);
+  }
+  
+  .card .list-group {
+    overflow-y: auto;
+  }
+  .notesDetails {
+      cursor: pointer;
+      width: 100%;
+  }
+
+  
